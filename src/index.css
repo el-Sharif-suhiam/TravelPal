@@ -1,0 +1,8 @@
+.leaflet-popup-content {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  margin: 5px;
+}
