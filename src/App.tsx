@@ -11,6 +11,14 @@ import { AppContext } from "./contexts/AppReducerContext";
 
 function App() {
   const theme = createTheme();
+  const mapStyles = {
+    padding: "5px",
+    height: "400px",
+    margin: "0 20px",
+    marginBottom: "30px",
+    boxShadow: "0 5px 15px #777",
+    borderRadius: "10px",
+  };
   const appContext = React.useContext(AppContext);
   const { state, dispatch } = appContext!;
   React.useEffect(() => {
@@ -35,11 +43,12 @@ function App() {
       dispatch({ type: "SET_IS_LOADING", payload: false });
     });
   }, [state.bounds, state.types]);
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header />
-      <Grid container spacing={3} style={{ width: "100%", height: "95vh" }}>
+      <Grid container spacing={3} style={{ width: "100%", minHeight: "95vh" }}>
         <Grid
           size={{ xs: 12, md: 4 }}
           style={{ boxShadow: "0 0 5px #777", borderRadius: "10px" }}
@@ -48,7 +57,11 @@ function App() {
         </Grid>
         <Grid
           size={{ xs: 12, md: 8 }}
-          style={{ boxShadow: "0 5px 15px #777", borderRadius: "10px" }}
+          style={mapStyles}
+          sx={{
+            height: { xs: "auto", md: "auto !important" },
+            margin: { xs: "initial", md: "0 !important" },
+          }}
         >
           <Map />
         </Grid>

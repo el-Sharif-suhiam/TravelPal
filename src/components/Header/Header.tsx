@@ -7,6 +7,7 @@ import SearchBox from "./SearchBox";
 const useStyles = makeStyles((theme: Theme) => ({
   title: {
     display: "none",
+    marginRight: "20px !important",
     [theme.breakpoints.up("sm")]: {
       display: "block",
     },

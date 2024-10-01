@@ -4,6 +4,7 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: "/TravelPal/",
   resolve: {
     alias: {
       leaflet: path.resolve(__dirname, "node_modules/leaflet"),

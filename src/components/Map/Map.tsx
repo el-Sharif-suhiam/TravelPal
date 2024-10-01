@@ -18,9 +18,9 @@ import L from "leaflet";
 delete L.Icon.Default.prototype._getIconUrl;
 
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: "/images/marker-icon-2x.png",
-  iconUrl: "/images/marker-icon.png",
-  shadowUrl: "/images/marker-shadow.png",
+  iconRetinaUrl: "/TravelPal/images/marker-icon-2x.png",
+  iconUrl: "/TravelPal/images/marker-icon.png",
+  shadowUrl: "/TravelPal/images/marker-shadow.png",
 });
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -88,7 +88,6 @@ function Map() {
       style={{
         width: "100%",
         height: "100%",
-        minHeight: "750px",
         borderRadius: "10px",
       }}
     >

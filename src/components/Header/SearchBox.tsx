@@ -77,7 +77,7 @@ export default function SearchBox() {
         margin: "10px",
         display: "flex",
         alignItems: "center",
-        width: 400,
+        width: 300,
       }}
     >
       <Autocomplete
